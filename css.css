@@ -1,0 +1,42 @@
+.parent_container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    max-height: 600px;
+
+}
+
+.container{
+  margin-left: 38%;
+}
+
+
+.img{
+    margin-left: 5px;
+    height:500px;
+    width:50px;
+    object-fit: cover;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: width 250ms ease-in-out;
+
+}
+
+.first_img{
+    width:350px;
+}
+
+.textOne{
+    position: absolute;
+    left: 40%;
+    top:40%;
+    z-index: 10;
+    color: white;
+    font-size: 24px;
+    display: none;
+    transition: step-end ease-in-out 250ms;
+
+}
+.item_holder{
+    display: inline;
+}
