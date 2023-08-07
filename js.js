@@ -1,89 +1,38 @@
-const imageOne = document.querySelectorAll('.img')[0];
-const imageTwo = document.querySelectorAll('.img')[1];
-const imageThree = document.querySelectorAll('.img')[2];
-const imageFour = document.querySelectorAll('.img')[3];
-const imageFive = document.querySelectorAll('.img')[4];
+'use strict'
 
-const textOne = document.querySelector('.textOne');
-
-
-imageOne.addEventListener('click' , expandOne);
-imageTwo.addEventListener('click' , expandTwo);
-imageThree.addEventListener('click' , expandThree);
-imageFour.addEventListener('click' , expandFour);
-imageFive.addEventListener('click' , expandFive);
-
-// let checker = ;
+const img = document.querySelectorAll('.img');
+const icon = document.querySelectorAll('.icon');
+const placeName = document.querySelectorAll('.place_name');
 
 
 
-function expandOne(){
-    if(imageOne.clientWidth == 350){
-        imageOne.style.width = '50px';
-        textOne.style.display = 'none';
-    }else{
-        imageOne.style.width = '350px';
-        imageTwo.style.width = '50px';
-        imageThree.style.width = '50px';
-        imageFour.style.width = '50px';
-        imageFive.style.width = '50px';
-        textOne.style.display = 'block';
-    }
-}
+// img[0].classList.remove('img');
+// img[0].classList.add('img_show');
+// icon[0].classList.remove('icon');
+// icon[0].classList.add('icon_show');
+// placeName[0].classList.remove('place_name');
+// placeName[0].classList.add('place_name_show');
+
+img.forEach(images =>{
+
+    images.addEventListener('click', e =>{
+        images.classList.toggle('active')
+    })
+
+});
 
 
-function expandTwo(){
-    if(imageTwo.clientWidth == 350){
-        imageTwo.style.width = '50px';
-        textOne.style.display = 'none';
-    }else{
-        imageTwo.style.width = '350px';
-        imageOne.style.width = '50px';
-        imageThree.style.width = '50px';
-        imageFour.style.width = '50px';
-        imageFive.style.width = '50px';
-        textOne.style.display = 'none';
-    }
-}
 
-function expandThree(){
-    if(imageThree.clientWidth == 350){
-        imageThree.style.width = '50px';
-    }else{
-        imageThree.style.width = '350px';
-        imageTwo.style.width = '50px';
-        imageOne.style.width = '50px';
-        imageFour.style.width = '50px';
-        imageFive.style.width = '50px';
-        textOne.style.display = 'none';
-    }
-}
 
-function expandFour(){
-    if(imageFour.clientWidth == 350){
-        imageFour.style.width = '50px';
-    }else{
-        imageFour.style.width = '350px';
-        imageTwo.style.width = '50px';
-        imageThree.style.width = '50px';
-        imageOne.style.width = '50px';
-        imageFive.style.width = '50px';
-        textOne.style.display = 'none';
-    }
-}
 
-function expandFive(){
-    if(imageFive.clientWidth == 350){
-        imageFive.style.width = '50px';
-    }else{
-        imageFive.style.width = '350px';
-        imageTwo.style.width = '50px';
-        imageThree.style.width = '50px';
-        imageFour.style.width = '50px';
-        imageOne.style.width = '50px';
-        textOne.style.display = 'none';
-    }
-}
+// img.classList.remove('img');
+// img.classList.add('img_show');
+// icon.classList.remove('icon');
+// icon.classList.add('icon_show');
+// placeName.classList.remove('place_name');
+// placeName.classList.add('place_name_show');
+// img.classList.toggle('active');
+
 
 
 
