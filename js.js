@@ -1,16 +1,16 @@
 'use strict'
+// TODO: (MDN) what is use-strict
 
-const imagesList = document.querySelectorAll('.img');
-// const imagesList = document.querySelectorAll('.item_card');
+const cardList = document.querySelectorAll('.item_card');
 
-imagesList.forEach(img => {
+cardList.forEach(card => {
 
-    img.addEventListener('click', () => {
-        if (!img.classList.contains('active')) {
-            imagesList.forEach(el => {
+    card.addEventListener('click', () => {
+        if (!card.classList.contains('active')) {
+            cardList.forEach(el => {
                 el.classList.remove('active');
             })
-            img.classList.add('active');
+            card.classList.add('active');
         }
     })
 
