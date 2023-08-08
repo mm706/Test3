@@ -1,37 +1,20 @@
 'use strict'
 
-const img = document.querySelectorAll('.img');
-const icon = document.querySelectorAll('.icon');
-const placeName = document.querySelectorAll('.place_name');
+const imagesList = document.querySelectorAll('.img');
+// const imagesList = document.querySelectorAll('.item_card');
 
+imagesList.forEach(img => {
 
-
-// img[0].classList.remove('img');
-// img[0].classList.add('img_show');
-// icon[0].classList.remove('icon');
-// icon[0].classList.add('icon_show');
-// placeName[0].classList.remove('place_name');
-// placeName[0].classList.add('place_name_show');
-
-img.forEach(images =>{
-
-    images.addEventListener('click', e =>{
-        images.classList.toggle('active')
+    img.addEventListener('click', () => {
+        if (!img.classList.contains('active')) {
+            imagesList.forEach(el => {
+                el.classList.remove('active');
+            })
+            img.classList.add('active');
+        }
     })
 
 });
-
-
-
-
-
-// img.classList.remove('img');
-// img.classList.add('img_show');
-// icon.classList.remove('icon');
-// icon.classList.add('icon_show');
-// placeName.classList.remove('place_name');
-// placeName.classList.add('place_name_show');
-// img.classList.toggle('active');
 
 
 
